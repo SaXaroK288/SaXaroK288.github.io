@@ -210,6 +210,19 @@ code{ font-family: var(--mono); font-size: .85em; color: var(--accent); }
   .about__grid{ grid-template-columns: 1fr; }
 }
 
+/* ============ REEL PROJECTS ============ */
+.reel-project{ margin-bottom: 40px; }
+.reel-project:last-child{ margin-bottom: 0; }
+.reel-project__title{
+  font-family: var(--display);
+  font-weight:600;
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  margin: 0 0 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
 /* ============ REEL GRID ============ */
 .reel-grid{
   display:grid;

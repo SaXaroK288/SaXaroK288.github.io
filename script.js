@@ -34,6 +34,9 @@ const translations = {
     'reels.title': 'Reels · видео с ИИ и CapCut',
     'reels.hint': 'Короткие вертикальные ролики.',
 
+    'reelproj1.title': 'Серия для клиента — TikTok',
+    'reelproj2.title': 'Уличный 3D-экран',
+
     'reel1.caption': 'Серия 1 — ролик для клиента (TikTok)',
     'reel1.tools': 'Kling, Seedance 2.0 · озвучка ElevenLabs · монтаж CapCut',
     'reel2.badge': 'Экран',
