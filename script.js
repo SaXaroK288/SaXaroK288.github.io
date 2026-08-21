@@ -36,6 +36,7 @@ const translations = {
 
     'reelproj1.title': 'Серия для клиента — TikTok',
     'reelproj2.title': 'Уличный 3D-экран',
+    'reelproj2.meta': 'Коммерческий проект — MOSKVA Metropolitan',
 
     'reel1.caption': 'Серия 1 — ролик для клиента (TikTok)',
     'reel1.tools': 'Kling, Seedance 2.0 · озвучка ElevenLabs · монтаж CapCut',
