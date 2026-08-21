@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Монтажёр · Видео с ИИ · Карточки WB</title>
-<meta name="description" content="Портфолио монтажёра: короткие видео с ИИ и CapCut, дизайн карточек товаров для Wildberries.">
+<title>Editor · AI Video · WB Cards</title>
+<meta name="description" content="Editor portfolio: short-form video with AI and CapCut, Wildberries product card design.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -12,83 +12,84 @@
 </head>
 <body>
 
-<!-- Таймлайн-навигация: играет роль "шкалы монтажа" -->
-<nav class="timeline" id="timeline" aria-label="Навигация по разделам">
-  <div class="timeline__track">
-    <div class="timeline__playhead" id="playhead"></div>
-    <a class="timeline__mark" data-time="00:00" href="#intro">
-      <span class="timeline__tc">00:00</span><span class="timeline__label">Обо мне</span>
-    </a>
-    <a class="timeline__mark" data-time="00:15" href="#reels">
-      <span class="timeline__tc">00:15</span><span class="timeline__label">Reels · ИИ</span>
-    </a>
-    <a class="timeline__mark" data-time="00:32" href="#wb">
-      <span class="timeline__tc">00:32</span><span class="timeline__label">Карточки WB</span>
-    </a>
-    <a class="timeline__mark" data-time="00:48" href="#case">
-      <span class="timeline__tc">00:48</span><span class="timeline__label">Кейс</span>
-    </a>
-    <a class="timeline__mark" data-time="01:00" href="#contact">
-      <span class="timeline__tc">01:00</span><span class="timeline__label">Контакты</span>
-    </a>
+<!-- Навигация + переключатель языка -->
+<nav class="timeline" id="timeline" aria-label="Section navigation">
+  <div class="timeline__inner">
+    <div class="timeline__track">
+      <div class="timeline__playhead" id="playhead"></div>
+      <a class="timeline__mark" href="#intro">
+        <span class="timeline__label" data-i18n="nav.about">About</span>
+      </a>
+      <a class="timeline__mark" href="#reels">
+        <span class="timeline__label" data-i18n="nav.reels">Reels</span>
+      </a>
+      <a class="timeline__mark" href="#wb">
+        <span class="timeline__label" data-i18n="nav.wb">WB Cards</span>
+      </a>
+      <a class="timeline__mark" href="#case">
+        <span class="timeline__label" data-i18n="nav.case">Case</span>
+      </a>
+      <a class="timeline__mark" href="#contact">
+        <span class="timeline__label" data-i18n="nav.contact">Contact</span>
+      </a>
+    </div>
+    <button type="button" class="lang-toggle" id="langToggle" aria-label="Switch language">RU</button>
   </div>
 </nav>
 
 <header class="hero" id="intro">
-  <div class="hero__rec"><span class="rec-dot"></span>REC · монтаж</div>
-  <h1 class="hero__title">Монтирую видео,<br>которые досматривают<br>до конца.</h1>
-  <p class="hero__subtitle">
-    Короткие ролики с помощью ИИ и CapCut, плюс карточки товаров для Wildberries —
-    делаю так, чтобы контент останавливал скролл.
+  <div class="hero__rec"><span class="rec-dot"></span><span data-i18n="hero.rec">REC · editing</span></div>
+  <h1 class="hero__title" data-i18n="hero.title">Hooked. Held.</h1>
+  <p class="hero__subtitle" data-i18n="hero.subtitle">
+    Short-form video with AI and CapCut, product cards for Wildberries —
+    built to stop the scroll.
   </p>
   <div class="hero__cta">
-    <a href="#reels" class="btn btn--primary">Смотреть работы</a>
-    <a href="#contact" class="btn btn--ghost">Написать</a>
+    <a href="#reels" class="btn btn--primary" data-i18n="hero.cta.work">See the work</a>
+    <a href="#contact" class="btn btn--ghost" data-i18n="hero.cta.contact">Get in touch</a>
   </div>
   <div class="hero__scope">
-    <span>КАДР 16:9 / 9:16 / 1:1</span>
+    <span data-i18n="hero.scope.frame">FRAME 16:9 / 9:16 / 1:1</span>
     <span>·</span>
-    <span>CapCut · AI-инструменты</span>
+    <span data-i18n="hero.scope.tools">CapCut · AI tools</span>
   </div>
 </header>
 
 <main>
 
-  <!-- ===================== ОБО МНЕ ===================== -->
-  <section class="section" id="about" aria-label="Обо мне">
+  <!-- ===================== ABOUT ===================== -->
+  <section class="section" id="about" aria-label="About">
     <div class="section__head">
-      <span class="section__tc">00:00 → 00:15</span>
-      <h2 class="section__title">Обо мне</h2>
+      <h2 class="section__title" data-i18n="about.title">About</h2>
     </div>
     <div class="about__grid">
-      <p class="about__text">
-        Я монтажёр-дизайнер. Собираю короткие видео с использованием ИИ-инструментов
-        и CapCut, а также делаю карточки товаров для маркетплейсов. Работал в нескольких
-        местах: снимал и монтировал ролики для соцсетей в команде, самостоятельно вёл
-        карточки товаров как WB-менеджер, и выполнял видеозадачи по контракту, где
-        результат нельзя показать напрямую — только описать. Умею и работать в команде,
-        и вести проект от начала до конца в одиночку.
+      <p class="about__text" data-i18n="about.text">
+        I'm a video editor and designer. I put together short videos using AI tools
+        and CapCut, and I build product cards for marketplaces. I've worked in a few
+        places: shot and edited social videos as part of a team, ran product cards
+        solo as a WB manager, and handled video work under contract where the result
+        can't be shown directly — only described. I work well in a team, and I can
+        run a project solo from start to finish.
       </p>
-      <ul class="tags" aria-label="Навыки">
-        <li class="tag">Монтаж видео</li>
-        <li class="tag">CapCut</li>
-        <li class="tag">Kling, Seedance 2.0</li>
-        <li class="tag">Higgsfield</li>
-        <li class="tag">ElevenLabs — озвучка, войсчендж</li>
-        <li class="tag">HeyGen — ИИ-аватары</li>
-        <li class="tag">Карточки Wildberries</li>
-        <li class="tag">Короткие вертикальные ролики</li>
-        <li class="tag">Работа с брифом заказчика</li>
+      <ul class="tags" aria-label="Skills">
+        <li class="tag" data-i18n="tag.editing">Video editing</li>
+        <li class="tag" data-i18n="tag.capcut">CapCut</li>
+        <li class="tag" data-i18n="tag.gen">Kling, Seedance 2.0</li>
+        <li class="tag" data-i18n="tag.higgsfield">Higgsfield</li>
+        <li class="tag" data-i18n="tag.elevenlabs">ElevenLabs — voice &amp; voice change</li>
+        <li class="tag" data-i18n="tag.heygen">HeyGen — AI avatars</li>
+        <li class="tag" data-i18n="tag.wb">Wildberries product cards</li>
+        <li class="tag" data-i18n="tag.vertical">Short vertical videos</li>
+        <li class="tag" data-i18n="tag.brief">Working from a client brief</li>
       </ul>
     </div>
   </section>
 
   <!-- ===================== REELS / AI + CAPCUT ===================== -->
-  <section class="section" id="reels" aria-label="Видео с ИИ и CapCut">
+  <section class="section" id="reels" aria-label="AI and CapCut video">
     <div class="section__head">
-      <span class="section__tc">00:15 → 00:32</span>
-      <h2 class="section__title">Reels · видео с ИИ и CapCut</h2>
-      <p class="section__hint">Короткие вертикальные ролики. Замени карточки ниже своими видео.</p>
+      <h2 class="section__title" data-i18n="reels.title">Reels · AI + CapCut video</h2>
+      <p class="section__hint" data-i18n="reels.hint">Short vertical videos.</p>
     </div>
 
     <div class="reel-grid">
@@ -101,8 +102,8 @@
           <span class="reel-card__badge">9:16</span>
         </div>
         <figcaption class="reel-card__caption">
-          Серия 1 — ролик для клиента (TikTok)
-          <span class="reel-card__tools">Kling, Seedance 2.0 · озвучка ElevenLabs · монтаж CapCut</span>
+          <span data-i18n="reel1.caption">Series 1 — client video (TikTok)</span>
+          <span class="reel-card__tools" data-i18n="reel1.tools">Kling, Seedance 2.0 · voice by ElevenLabs · edited in CapCut</span>
         </figcaption>
       </figure>
 
@@ -111,12 +112,12 @@
           <video class="reel-card__video" muted loop playsinline controls preload="metadata">
             <source src="assets/videos/reel-2.mp4" type="video/mp4">
           </video>
-          <span class="reel-card__badge">Экран</span>
+          <span class="reel-card__badge" data-i18n="reel2.badge">Screen</span>
         </div>
         <figcaption class="reel-card__caption">
-          3D-ролик для уличного углового экрана
-          <span class="reel-card__tools">Seedance, After Effects · монтаж CapCut</span>
-          <span class="reel-card__team">В команде с другим дизайнером</span>
+          <span data-i18n="reel2.caption">3D video for an outdoor corner screen</span>
+          <span class="reel-card__tools" data-i18n="reel2.tools">Seedance, After Effects · edited in CapCut</span>
+          <span class="reel-card__team" data-i18n="reel2.team">Worked with another designer</span>
         </figcaption>
       </figure>
 
@@ -125,119 +126,116 @@
           <video class="reel-card__video" muted loop playsinline controls preload="metadata">
             <source src="assets/videos/reel-3.mp4" type="video/mp4">
           </video>
-          <span class="reel-card__badge">С улицы</span>
+          <span class="reel-card__badge" data-i18n="reel3.badge">On location</span>
         </div>
         <figcaption class="reel-card__caption">
-          Тот же ролик — съёмка на здании
-          <span class="reel-card__tools">Как это выглядит вживую</span>
+          <span data-i18n="reel3.caption">Same video — filmed on the building</span>
+          <span class="reel-card__tools" data-i18n="reel3.tools">What it looks like in real life</span>
         </figcaption>
       </figure>
 
     </div>
   </section>
 
-  <!-- ===================== WB КАРТОЧКИ ===================== -->
-  <section class="section" id="wb" aria-label="Карточки товаров Wildberries">
+  <!-- ===================== WB CARDS ===================== -->
+  <section class="section" id="wb" aria-label="Wildberries product cards">
     <div class="section__head">
-      <span class="section__tc">00:32 → 00:48</span>
-      <h2 class="section__title">Карточки товаров · Wildberries</h2>
-      <p class="section__hint">Работал WB-менеджером в одиночку, карточки собирал с помощью ИИ-инструментов.</p>
+      <h2 class="section__title" data-i18n="wb.title">Product cards · Wildberries</h2>
+      <p class="section__hint" data-i18n="wb.hint">Worked solo as a WB manager, built the cards with AI tools.</p>
     </div>
 
     <div class="wb-projects">
 
       <article class="wb-project">
         <div class="wb-project__head">
-          <h3 class="wb-project__title">Парфюмированное мыло</h3>
-          <span class="wb-project__meta">13 карточек · 3 ароматические линии</span>
+          <h3 class="wb-project__title" data-i18n="wb.soap.title">Perfumed soap</h3>
+          <span class="wb-project__meta" data-i18n="wb.soap.meta">13 cards · 3 scent lines</span>
         </div>
         <div class="wb-project__strip">
-          <img src="assets/images/wb/soap-01.jpg" alt="Карточка мыла — персиковая линия, преимущества" loading="lazy">
-          <img src="assets/images/wb/soap-02.jpg" alt="Карточка мыла — персиковая линия, фото товара" loading="lazy">
-          <img src="assets/images/wb/soap-03.jpg" alt="Карточка мыла — персиковая линия, упаковка" loading="lazy">
-          <img src="assets/images/wb/soap-04.jpg" alt="Карточка мыла — персиковая линия, подарочный вариант" loading="lazy">
-          <img src="assets/images/wb/soap-05.jpg" alt="Карточка мыла — персиковая линия, на мраморе" loading="lazy">
-          <img src="assets/images/wb/soap-06.jpg" alt="Карточка мыла — розовая линия, инструкция по применению" loading="lazy">
-          <img src="assets/images/wb/soap-07.jpg" alt="Карточка мыла — розовая линия, упаковка" loading="lazy">
-          <img src="assets/images/wb/soap-08.jpg" alt="Карточка мыла — бело-золотая линия, инструкция" loading="lazy">
-          <img src="assets/images/wb/soap-09.jpg" alt="Карточка мыла — розовая линия, подарочный вариант" loading="lazy">
-          <img src="assets/images/wb/soap-10.jpg" alt="Карточка мыла — розовая линия, фото товара" loading="lazy">
-          <img src="assets/images/wb/soap-11.jpg" alt="Карточка мыла — сиреневая линия, преимущества" loading="lazy">
-          <img src="assets/images/wb/soap-12.jpg" alt="Карточка мыла — голубая линия, упаковка" loading="lazy">
-          <img src="assets/images/wb/soap-13.jpg" alt="Карточка мыла — комплект из 3 штук" loading="lazy">
+          <img src="assets/images/wb/soap-01.jpg" alt="Soap card — peach line, benefits" loading="lazy">
+          <img src="assets/images/wb/soap-02.jpg" alt="Soap card — peach line, product photo" loading="lazy">
+          <img src="assets/images/wb/soap-03.jpg" alt="Soap card — peach line, packaging" loading="lazy">
+          <img src="assets/images/wb/soap-04.jpg" alt="Soap card — peach line, gift use case" loading="lazy">
+          <img src="assets/images/wb/soap-05.jpg" alt="Soap card — peach line, on marble" loading="lazy">
+          <img src="assets/images/wb/soap-06.jpg" alt="Soap card — pink line, how to use" loading="lazy">
+          <img src="assets/images/wb/soap-07.jpg" alt="Soap card — pink line, packaging" loading="lazy">
+          <img src="assets/images/wb/soap-08.jpg" alt="Soap card — white-gold line, how to use" loading="lazy">
+          <img src="assets/images/wb/soap-09.jpg" alt="Soap card — pink line, gift use case" loading="lazy">
+          <img src="assets/images/wb/soap-10.jpg" alt="Soap card — pink line, product photo" loading="lazy">
+          <img src="assets/images/wb/soap-11.jpg" alt="Soap card — lilac line, benefits" loading="lazy">
+          <img src="assets/images/wb/soap-12.jpg" alt="Soap card — blue line, packaging" loading="lazy">
+          <img src="assets/images/wb/soap-13.jpg" alt="Soap card — set of 3" loading="lazy">
         </div>
       </article>
 
       <article class="wb-project">
         <div class="wb-project__head">
-          <h3 class="wb-project__title">Носки</h3>
-          <span class="wb-project__meta">4 карточки · 2 бренда — DMDBS, ADIX</span>
+          <h3 class="wb-project__title" data-i18n="wb.socks.title">Socks</h3>
+          <span class="wb-project__meta" data-i18n="wb.socks.meta">4 cards · 2 brands — DMDBS, ADIX</span>
         </div>
         <div class="wb-project__strip">
-          <img src="assets/images/wb/socks-01.jpg" alt="Карточка носков DMDBS, бежевый цвет" loading="lazy">
-          <img src="assets/images/wb/socks-02.jpg" alt="Карточка носков DMDBS, светлый цвет" loading="lazy">
-          <img src="assets/images/wb/socks-03.jpg" alt="Карточка шёлковых носков ADIX, лайфстайл-фото" loading="lazy">
-          <img src="assets/images/wb/socks-04.jpg" alt="Карточка шёлковых носков ADIX, инфографика" loading="lazy">
+          <img src="assets/images/wb/socks-01.jpg" alt="DMDBS socks card, beige colorway" loading="lazy">
+          <img src="assets/images/wb/socks-02.jpg" alt="DMDBS socks card, light colorway" loading="lazy">
+          <img src="assets/images/wb/socks-03.jpg" alt="ADIX silk socks card, lifestyle photo" loading="lazy">
+          <img src="assets/images/wb/socks-04.jpg" alt="ADIX silk socks card, infographic" loading="lazy">
         </div>
       </article>
 
     </div>
   </section>
 
-  <!-- ===================== КЕЙС БЕЗ ВИДЕО ===================== -->
-  <section class="section" id="case" aria-label="Кейс по контракту">
+  <!-- ===================== CONTRACT CASE ===================== -->
+  <section class="section" id="case" aria-label="Contract case">
     <div class="section__head">
-      <span class="section__tc">00:48 → 01:00</span>
-      <h2 class="section__title">Кейс по контракту</h2>
+      <h2 class="section__title" data-i18n="case.title">Contract case</h2>
     </div>
 
     <div class="case-card">
       <div class="case-card__reel">
         <span class="case-card__signal">NO SIGNAL</span>
-        <span class="case-card__note">Материалы под NDA — показать нельзя, но можно рассказать</span>
+        <span class="case-card__note" data-i18n="case.note">Materials are under NDA — can't show them, but I can walk through it</span>
       </div>
       <div class="case-card__body">
-        <h3 class="case-card__title">Видео по контракту</h3>
-        <p class="case-card__text">
-          Монтировал видео по контракту — название заказчика и сами материалы
-          раскрывать нельзя по условиям NDA, но рабочий процесс могу описать. Основа
-          монтажа — CapCut. Часть визуального материала генерировал через Seedance 2.0,
-          картинки — через Higgsfield. Также использовал функции переноса движения:
-          повторение движений из оригинального видео в новом ИИ-видео. Озвучку и смену
-          голоса делал через ElevenLabs. Для роликов с аватарами использовал HeyGen.
+        <h3 class="case-card__title" data-i18n="case.body.title">Contract video work</h3>
+        <p class="case-card__text" data-i18n="case.body.text">
+          I edited video under contract — I can't name the client or show the
+          materials because of the NDA, but I can describe the process. The base is
+          CapCut. Some of the visual material I generated with Seedance 2.0, images
+          with Higgsfield. I also used motion-transfer features: repeating the motion
+          from an original video in a new AI-generated one. Voice and voice-changing
+          were done with ElevenLabs. For avatar videos I used HeyGen.
         </p>
         <ul class="case-card__facts">
-          <li><span>Роль</span>Монтажёр</li>
-          <li><span>Монтаж</span>CapCut</li>
-          <li><span>Генерация видео</span>Seedance 2.0</li>
-          <li><span>Генерация картинок</span>Higgsfield</li>
-          <li><span>Перенос движения</span>повтор анимации из ориг. видео в ИИ-видео</li>
-          <li><span>Голос</span>ElevenLabs — озвучка и войсчендж</li>
-          <li><span>Аватары</span>HeyGen</li>
+          <li><span class="fact-label" data-i18n="case.fact.role.l">Role</span><span data-i18n="case.fact.role.v">Editor</span></li>
+          <li><span class="fact-label" data-i18n="case.fact.edit.l">Editing</span><span data-i18n="case.fact.edit.v">CapCut</span></li>
+          <li><span class="fact-label" data-i18n="case.fact.video.l">Video gen.</span><span data-i18n="case.fact.video.v">Seedance 2.0</span></li>
+          <li><span class="fact-label" data-i18n="case.fact.image.l">Image gen.</span><span data-i18n="case.fact.image.v">Higgsfield</span></li>
+          <li><span class="fact-label" data-i18n="case.fact.motion.l">Motion transfer</span><span data-i18n="case.fact.motion.v">repeats motion from an original video in AI video</span></li>
+          <li><span class="fact-label" data-i18n="case.fact.voice.l">Voice</span><span data-i18n="case.fact.voice.v">ElevenLabs — voice &amp; voice change</span></li>
+          <li><span class="fact-label" data-i18n="case.fact.avatar.l">Avatars</span><span data-i18n="case.fact.avatar.v">HeyGen</span></li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- ===================== КОНТАКТЫ ===================== -->
-  <section class="section section--contact" id="contact" aria-label="Контакты">
+  <!-- ===================== CONTACT ===================== -->
+  <section class="section section--contact" id="contact" aria-label="Contact">
     <div class="section__head">
-      <span class="section__tc">01:00</span>
-      <h2 class="section__title">Контакты</h2>
+      <h2 class="section__title" data-i18n="contact.title">Contact</h2>
     </div>
-    <p class="contact__text">Открыт к проектам: короткие видео, ИИ-монтаж, карточки для маркетплейсов.</p>
+    <p class="contact__text" data-i18n="contact.text">Open to projects: short-form video, AI editing, marketplace product cards.</p>
     <div class="contact__links">
-      <a class="contact__link" href="https://t.me/твой_ник" target="_blank" rel="noopener">Telegram →</a>
-      <a class="contact__link" href="mailto:почта@пример.com">Email →</a>
-      <a class="contact__link" href="https://wa.me/79990000000" target="_blank" rel="noopener">WhatsApp →</a>
+      <a class="contact__link" href="https://t.me/SaXarok288" target="_blank" rel="noopener">Telegram →</a>
+      <a class="contact__link" href="https://wa.me/77078062009" target="_blank" rel="noopener">WhatsApp →</a>
+      <a class="contact__link" href="mailto:bbeksultan.nugmanov@gmail.com">Email →</a>
     </div>
   </section>
 
 </main>
 
 <footer class="footer">
-  <span>© <span id="year"></span> Портфолио монтажёра</span>
-  <span>Собрано вручную · GitHub Pages</span>
+  <span>© <span id="year"></span> <span data-i18n="footer.title">Editor portfolio</span></span>
+  <span data-i18n="footer.built">Built by hand · GitHub Pages</span>
 </footer>
 
 <script src="script.js"></script>
