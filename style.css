@@ -108,9 +108,42 @@ code{ font-family: var(--mono); font-size: .85em; color: var(--accent); }
 
 /* ============ HERO ============ */
 .hero{
+  position: relative;
   max-width: 1120px;
   margin: 0 auto;
   padding: clamp(48px, 10vw, 120px) 24px clamp(40px, 8vw, 80px);
+  overflow: hidden;
+}
+.hero::before,
+.hero::after{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+}
+.hero::before{
+  width: 420px; height: 420px;
+  top: -180px; left: -140px;
+  background: var(--accent);
+  opacity: .16;
+  animation: heroBlobA 16s ease-in-out infinite alternate;
+}
+.hero::after{
+  width: 320px; height: 320px;
+  bottom: -160px; right: -100px;
+  background: var(--accent);
+  opacity: .1;
+  animation: heroBlobB 20s ease-in-out infinite alternate;
+}
+@keyframes heroBlobA{
+  from{ transform: translate(0, 0) scale(1); }
+  to{ transform: translate(70px, 50px) scale(1.15); }
+}
+@keyframes heroBlobB{
+  from{ transform: translate(0, 0) scale(1); }
+  to{ transform: translate(-50px, -40px) scale(1.1); }
 }
 .hero__rec{
   display:inline-flex;
@@ -412,9 +445,88 @@ code{ font-family: var(--mono); font-size: .85em; color: var(--accent); }
   color: var(--accent);
   text-transform: uppercase;
 }
+
+.case-card__ranks{ margin-top: 24px; }
+.case-card__ranks-title{
+  font-family: var(--mono);
+  font-size: .74rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin: 0 0 10px;
+}
+.rank-list{
+  list-style:none;
+  margin:0; padding:0;
+  display:flex;
+  flex-wrap:wrap;
+  gap: 8px;
+}
+.rank-chip{
+  display:flex;
+  align-items:center;
+  gap: 6px;
+  font-size: .82rem;
+  padding: 6px 12px 6px 8px;
+  border-radius: 999px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+}
+.rank-place{
+  font-family: var(--mono);
+  font-size: .72rem;
+  font-weight:600;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: var(--border);
+  color: var(--text);
+}
+.rank-chip--gold .rank-place{ background:#e8c34a; color:#151016; }
+.rank-chip--silver .rank-place{ background:#c9ccd6; color:#151016; }
+.rank-chip--bronze .rank-place{ background:#cf8a4f; color:#151016; }
+.rank-chip--gold{ border-color: rgba(232,195,74,.4); }
+.rank-chip--silver{ border-color: rgba(201,204,214,.4); }
+.rank-chip--bronze{ border-color: rgba(207,138,79,.4); }
+
 @media (max-width: 700px){
   .case-card{ grid-template-columns: 1fr; }
   .case-card__body{ padding: 0 24px 24px; }
+}
+
+/* ============ CERTIFICATES ============ */
+.cert-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+.cert-card{ margin:0; }
+.cert-card a{
+  display:block;
+  border-radius: var(--radius);
+  overflow:hidden;
+  border: 1px solid var(--border);
+  transition: border-color .15s ease, transform .15s ease;
+}
+.cert-card a:hover{ border-color: var(--accent); transform: translateY(-2px); }
+.cert-card img{ width:100%; display:block; aspect-ratio: 4/3; object-fit: cover; }
+.cert-card figcaption{
+  margin-top: 12px;
+  display:flex;
+  flex-direction:column;
+  gap: 4px;
+}
+.cert-card__name{
+  font-family: var(--display);
+  font-weight:600;
+  font-size: 1rem;
+}
+.cert-card__desc{
+  font-size: .85rem;
+  color: var(--text-muted);
+}
+.cert-card__meta{
+  font-family: var(--mono);
+  font-size: .72rem;
+  color: var(--accent);
 }
 
 /* ============ CONTACT ============ */
