@@ -264,6 +264,13 @@ code{ font-family: var(--mono); font-size: .85em; color: var(--accent); }
   color: var(--accent);
   margin: 6px 0 0;
 }
+.reel-project__process{
+  font-size: .85rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+  max-width: 640px;
+  margin: 10px 0 0;
+}
 
 /* ============ REEL GRID ============ */
 .reel-grid{
