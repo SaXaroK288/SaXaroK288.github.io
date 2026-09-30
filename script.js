@@ -69,6 +69,9 @@ const translations = {
     'case.fact.voice.l': 'Голос', 'case.fact.voice.v': 'ElevenLabs — озвучка и войсчендж',
     'case.fact.avatar.l': 'Аватары', 'case.fact.avatar.v': 'HeyGen',
 
+    'case.example.label': 'Пример в похожем стиле — другой клиент, не материалы по NDA',
+    'case.example.caption': 'Монтаж в похожем стиле для другого клиента',
+
     'case.ranks.title': 'Моё место в команде по месяцам (среди монтажёров)',
     'case.rank.apr': 'Апрель · 36,16%',
     'case.rank.jun': 'Июнь · 15,36%',

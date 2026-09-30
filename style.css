@@ -446,6 +446,15 @@ code{ font-family: var(--mono); font-size: .85em; color: var(--accent); }
   text-transform: uppercase;
 }
 
+.case-card__example{ margin-top: 24px; }
+.case-card__example-label{
+  font-family: var(--mono);
+  font-size: .72rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin: 0 0 10px;
+}
+
 .case-card__ranks{ margin-top: 24px; }
 .case-card__ranks-title{
   font-family: var(--mono);
