@@ -452,7 +452,17 @@ code{ font-family: var(--mono); font-size: .85em; color: var(--accent); }
   font-size: .72rem;
   color: var(--accent);
   text-transform: uppercase;
-  margin: 0 0 10px;
+  margin: 0 0 6px;
+}
+.case-card__example-note{
+  font-size: .82rem;
+  color: var(--text-muted);
+  margin: 0 0 12px;
+}
+.case-card__example-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 220px));
+  gap: 16px;
 }
 
 .case-card__ranks{ margin-top: 24px; }
