@@ -264,12 +264,33 @@ code{ font-family: var(--mono); font-size: .85em; color: var(--accent); }
   color: var(--accent);
   margin: 6px 0 0;
 }
+.reel-project__body{
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+.reel-project__body .reel-grid{
+  flex: 0 0 auto;
+  width: 220px;
+}
+.reel-project__body--wide .reel-grid{
+  width: auto;
+  max-width: 460px;
+  flex: 1 1 320px;
+}
 .reel-project__process{
+  flex: 1 1 260px;
+  min-width: 240px;
   font-size: .85rem;
   line-height: 1.55;
   color: var(--text-muted);
-  max-width: 640px;
-  margin: 10px 0 0;
+  margin: 0;
+}
+@media (max-width: 640px){
+  .reel-project__body{ flex-direction: column; }
+  .reel-project__body .reel-grid,
+  .reel-project__body--wide .reel-grid{ width: 100%; max-width: none; }
 }
 
 /* ============ REEL GRID ============ */
